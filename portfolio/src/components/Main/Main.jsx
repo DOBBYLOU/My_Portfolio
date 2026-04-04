@@ -5,7 +5,7 @@ import Header from "../Header/Header"
 function Main() {
     return (
         <div className="main">
-            <Header />
+            <Header Page={"Main"} />
             <MyPerson />
             <WorkedWith />
         </div>

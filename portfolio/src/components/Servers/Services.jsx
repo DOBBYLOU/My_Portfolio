@@ -1,6 +1,10 @@
+import Header from "../Header/Header"
+
 function Services() {
     return (
-        <div className="services">Services</div>
+        <div className="services">
+            <Header Page={"Services"} />
+        </div>
     )
 }
 

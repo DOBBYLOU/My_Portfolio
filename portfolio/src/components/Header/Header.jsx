@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 
 
-function Header() {
+function Header({ Page }) {
     const [showH, setShowH] = useState(false)
 
 
@@ -17,9 +17,9 @@ function Header() {
                 <div className={Styles.lastName}>Andrianov</div>
             </div>
             <nav className={`${Styles.navH}`}>
-                <Link to="/" className={Styles.active}>Main</Link>
-                <Link to="/portfolio">Portfolio</Link>
-                <Link to="/services">Services</Link>
+                <Link to="/" className={Page === "Main" ? Styles.active : ""}>Main</Link>
+                <Link to="/portfolio" className={Page === "Portfolio" ? Styles.active : ""}>Portfolio</Link>
+                <Link to="/services" className={Page === "Services" ? Styles.active : ""}>Services</Link>
             </nav>
             <div className={Styles.btns}>
                 <button className={Styles.contBtn} onClick={() => setShowH(true)} >contacts</button>
