@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ModalWindow from "../Modal/ModalWindow"
 import Styles from "./Header.module.css"
+import { Link } from "react-router-dom"
 
 
 
@@ -16,9 +17,9 @@ function Header() {
                 <div className={Styles.lastName}>Andrianov</div>
             </div>
             <nav className={`${Styles.navH}`}>
-                <a href="#" className={Styles.active}>Main</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Services</a>
+                <Link to="/" className={Styles.active}>Main</Link>
+                <Link to="/portfolio">Portfolio</Link>
+                <Link to="/services">Services</Link>
             </nav>
             <div className={Styles.btns}>
                 <button className={Styles.contBtn} onClick={() => setShowH(true)} >contacts</button>

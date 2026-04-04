@@ -1,14 +1,20 @@
-import Header from "./components/Header/Header";
-import MyPerson from "./components/MyPerson/MyPerson";
-import WorkedWith from "./components/WorkedWith/WorkedWith";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import Main from "./components/Main/Main";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Services from "./components/Servers/Services";
+
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <MyPerson />
-      <WorkedWith />
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/services" element={<Services />} />
+        </Routes>
+      </Router>
+    </div >
   );
 }
 
