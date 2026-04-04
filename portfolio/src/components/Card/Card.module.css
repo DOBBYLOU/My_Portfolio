@@ -1,0 +1,19 @@
+.card {
+    height: 60px;
+    padding-inline: 10px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 12px;
+}
+
+.card img {
+    height: 70%;
+}
+
+.card>div {
+
+    padding-bottom: 5px;
+}

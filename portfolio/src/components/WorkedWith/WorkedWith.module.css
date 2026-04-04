@@ -1,0 +1,15 @@
+.workedWith h4 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.cards {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 60px;
+    font-weight: 700;
+
+}

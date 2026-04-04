@@ -1,0 +1,38 @@
+.myPerson {
+    padding: 10px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+
+}
+
+.about {
+    width: 50vw;
+    padding-bottom: 20px;
+
+}
+
+.about * {
+    user-select: text;
+}
+
+.about h1 {
+    font-size: 70px;
+    user-select: none;
+}
+
+.about p {
+    font-size: 30px;
+
+}
+
+.myPhoto img {
+    width: 500px;
+    height: 500px;
+    border: 2px solid #000;
+    border-radius: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
