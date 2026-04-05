@@ -1,0 +1,17 @@
+.about {
+    font-size: 30px;
+}
+
+
+
+.cards {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.cards>* {
+    flex: 1
+}
