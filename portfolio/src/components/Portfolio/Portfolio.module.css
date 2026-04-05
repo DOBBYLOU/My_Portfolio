@@ -5,10 +5,10 @@
 
 
 .cards {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-wrap: nowrap;
 
 }
 
