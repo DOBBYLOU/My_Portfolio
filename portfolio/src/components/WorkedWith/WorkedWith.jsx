@@ -5,7 +5,7 @@ function WorkedWith() {
     return (
         <div className={`${Styles.workedWith} container`}>
             <h4>Worked with:</h4>
-            <div className={`${Styles.cards}`}>
+            <div className={`${Styles.cards}`} translate="no">
                 <Card src="/Imgs/react-icon-on-white-square.png">React.Js</Card>
                 <Card src="/Imgs/node-js-icon.png">Node.js</Card>
                 <Card src="/Imgs/js-logo.png">Java Script</Card>

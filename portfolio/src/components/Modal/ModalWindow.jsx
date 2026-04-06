@@ -1,9 +1,9 @@
 import Styles from "./ModalWindow.module.css"
 
-function ModalWindow({ active, setActive, children }) {
+function ModalWindow({ active, setActive, autoWidth, children }) {
     return (
-        <div className={active ? `${Styles.back} ${Styles.active}` : `${Styles.back}`} onClick={() => setActive(false)} >
-            <div className={Styles.modal} onClick={(e) => e.stopPropagation()}>{children}</div>
+        <div className={`${Styles.back} ${active ? Styles.active : ""}`} onClick={() => setActive(false)} >
+            <div className={`${Styles.modal} ${autoWidth ? Styles.autoWidth : ""}`} onClick={(e) => e.stopPropagation()}>{children}</div>
         </div >
     )
 }

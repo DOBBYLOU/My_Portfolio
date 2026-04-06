@@ -12,9 +12,9 @@ function Header({ Page }) {
 
     return (
         <div className={`${Styles.header} container`}>
-            <div className={Styles.logo}>
+            <div className={Styles.logo} translate="no">
                 <div className={Styles.name}>Alexander</div>
-                <div className={Styles.lastName}>Andrianov</div>
+                <div className={Styles.lastName}>Andrijanov</div>
             </div>
             <nav className={`${Styles.navH}`}>
                 <Link to="/" className={Page === "Main" ? Styles.active : ""}>Main</Link>

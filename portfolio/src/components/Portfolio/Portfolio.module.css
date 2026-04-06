@@ -3,6 +3,14 @@
 }
 
 
+.aboutText {
+    font-size: 30px;
+    text-wrap: wrap;
+}
+
+
+
+
 
 .cards {
     display: flex;
