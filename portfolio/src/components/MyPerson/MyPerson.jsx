@@ -10,7 +10,7 @@ function MyPerson() {
 
             </div>
             <div className={`${Styles.myPhoto}`}>
-                <img src="Imgs/photo_5359394229748176775_y.png"></img>
+                <img src="Imgs/photo_5359394229748176775_y.png" alt="My_Photo"></img>
             </div>
         </div>
     )

@@ -10,16 +10,12 @@ function SiteCard({ Screen, Demo, Git, Name, About }) {
         setAboutOpen(true);
     }
 
-    const Close = () => {
-        setAboutOpen(false);
-    }
-
 
 
     return (
         <div className={Styles.siteCard}>
             <div className={Styles.screen}>
-                <img src={Screen} />
+                <img src={Screen} alt="Screen" />
             </div>
 
 
