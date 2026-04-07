@@ -1,7 +1,7 @@
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Main from "./components/Main/Main";
 import Portfolio from "./components/Portfolio/Portfolio";
-import Services from "./components/Servers/Services";
+import Services from "./components/Services/Services";
 
 
 function App() {

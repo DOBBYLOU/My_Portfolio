@@ -6,12 +6,12 @@ import { Link } from "react-router-dom"
 
 
 
-function Header({ Page }) {
+function Header({ Page, NoVisible }) {
     const [showH, setShowH] = useState(false)
 
 
     return (
-        <div className={`${Styles.header} container`}>
+        <div className={`${Styles.header} ${NoVisible ? Styles.noVisible : ""} container`}>
             <div className={Styles.logo} translate="no">
                 <div className={Styles.name}>Alexander</div>
                 <div className={Styles.lastName}>Andrijanov</div>

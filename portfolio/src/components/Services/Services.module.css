@@ -1,0 +1,11 @@
+.services {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.scroll {
+    background-color: black;
+    color: white;
+
+}

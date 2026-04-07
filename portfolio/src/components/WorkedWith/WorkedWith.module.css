@@ -1,4 +1,6 @@
 .workedWith h4 {
+    padding-left: 10px;
+    font-weight: 500;
     margin-top: 0;
     font-size: 30px;
 }
@@ -6,6 +8,7 @@
 .cards {
     margin-top: 50px;
     margin-bottom: 20px;
+    padding-inline: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
