@@ -113,3 +113,31 @@
     display: block;
     width: 100%;
 }
+
+@media (max-width: 650px) {
+    .siteCard {
+        margin-inline: 0;
+
+    }
+
+    .siteCard:has(+.siteCard) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .aboutBtn {
+        font-size: calc(35px * 0.7);
+        margin-bottom: 5px;
+
+    }
+
+
+}
+
+@media (max-width: 550px) {
+    .aboutBtn {
+        font-size: calc(35px * 0.8);
+        margin-bottom: 5px;
+
+    }
+}

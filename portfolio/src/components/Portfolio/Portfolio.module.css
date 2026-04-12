@@ -1,11 +1,15 @@
 .about {
     font-size: 30px;
+    text-align: center;
+
 }
 
 
 .aboutText {
     font-size: 30px;
     text-wrap: wrap;
+    width: 50vw;
+
 }
 
 
@@ -22,4 +26,39 @@
 
 .cards>* {
     flex: 1
+}
+
+@media (max-width: 1280px) {
+    .cards {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 650px) {
+    .cards {
+        margin-inline: 20px;
+        gap: 5px;
+    }
+
+    .about {
+        font-size: calc(30px * 0.8);
+
+
+    }
+}
+
+@media (max-width: 550px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .cards>* {
+        width: 80%;
+    }
+
+    .about {
+        font-size: calc(30px * 1);
+
+
+    }
 }

@@ -3,7 +3,7 @@ import Styles from "./WorkedWith.module.css"
 
 function WorkedWith() {
     return (
-        <div className={`${Styles.workedWith} container`}>
+        <div className={`container ${Styles.workedWith} `}>
             <h4>Worked with:</h4>
             <div className={`${Styles.cards}`} translate="no">
                 <Card src="/Imgs/react-icon-on-white-square.png">React.Js</Card>

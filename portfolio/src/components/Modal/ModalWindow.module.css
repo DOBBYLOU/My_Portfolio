@@ -28,14 +28,8 @@
 .modal {
     padding: 5px 20px;
     color: black;
-    width: 30vw;
+    width: auto;
     height: auto;
     background-color: white;
     border-radius: 30px;
-}
-
-.autoWidth {
-    text-align: center;
-    width: 50vw;
-
 }

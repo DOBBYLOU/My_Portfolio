@@ -60,10 +60,10 @@ function Portfolio() {
     return (
         <div className={`${Styles.portfolio}`}>
             <Header Page={"Portfolio"} />
-            <div className={`${Styles.cards} container`}>
+            <div className={`container ${Styles.cards}`}>
                 <SiteCard Screen={"/Imgs/Screens/honey-screen.png"} Demo={"https://dobbylou.github.io/Honey_Site/"} Git={"https://github.com/DOBBYLOU/Honey_Site.git"} Name={<HoneyText />} About={<HoneyAbout />} />
                 <SiteCard Screen={"/Imgs/Screens/velocity-screen.png"} Demo={"https://dobbylou.github.io/Velocity/"} Git={"https://github.com/DOBBYLOU/Velocity.git"} Name={<VelocityText />} About={<VelocityAbout />} />
-                <SiteCard Screen={"/Imgs/Screens/portfolio-screen.png"} Demo={"https://dobbylou.github.io/Velocity/"} Git={"https://github.com/DOBBYLOU/My_Portfolio.git"} Name={<PortfolioText />} About={<PortfolioAbout />} />
+                <SiteCard Screen={"/Imgs/Screens/portfolio-screen.png"} Demo={"https://my-portfolio-qqas.vercel.app/"} Git={"https://github.com/DOBBYLOU/My_Portfolio.git"} Name={<PortfolioText />} About={<PortfolioAbout />} />
             </div>
         </div>
     )

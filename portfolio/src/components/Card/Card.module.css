@@ -17,3 +17,31 @@
 
     padding-bottom: 5px;
 }
+
+@media (max-width: 1480px) {
+    .card {
+        height: calc(60px * 0.8);
+    }
+
+
+
+
+}
+
+@media (max-width: 1280px) {
+    .card {
+        height: calc(60px * 0.7);
+    }
+}
+
+@media (max-width: 1180px) {
+    .card {
+        height: calc(60px * 0.6);
+    }
+}
+
+@media (max-width: 920px) {
+    .card {
+        height: calc(60px * 0.7);
+    }
+}

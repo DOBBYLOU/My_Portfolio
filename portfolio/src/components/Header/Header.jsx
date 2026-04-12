@@ -7,24 +7,36 @@ import { Link } from "react-router-dom"
 
 
 function Header({ Page, NoVisible }) {
-    const [showH, setShowH] = useState(false)
+    const [showH, setShowH] = useState(false);
+    const [showNav, setShowNav] = useState(false);
 
 
     return (
-        <div className={`${Styles.header} ${NoVisible ? Styles.noVisible : ""} container`}>
-            <div className={Styles.logo} translate="no">
-                <div className={Styles.name}>Alexander</div>
-                <div className={Styles.lastName}>Andrijanov</div>
+        <div className={`container ${Styles.header} ${NoVisible ? Styles.noVisible : ""}`}>
+            <div className={`${Styles.allLogo}`}>
+                <div className={Styles.logo} translate="no">
+                    <div className={Styles.name}>Alexander</div>
+                    <div className={Styles.lastName}>Andriianov</div>
+                </div>
+                <div className={`${Styles.profession}`}>Front-End Developer</div>
             </div>
-            <nav className={`${Styles.navH}`}>
+
+
+            <nav className={`${Styles.navH} ${showNav ? Styles.showNav : ""}`}>
                 <Link to="/" className={Page === "Main" ? Styles.active : ""}>Main</Link>
                 <Link to="/portfolio" className={Page === "Portfolio" ? Styles.active : ""}>Portfolio</Link>
                 <Link to="/services" className={Page === "Services" ? Styles.active : ""}>Services</Link>
             </nav>
             <div className={Styles.btns}>
-                <button className={Styles.contBtn} onClick={() => setShowH(true)} >contacts</button>
-                <div className={Styles.switch}>
-                </div>
+                <button className={Styles.contBtn} onClick={() => setShowH(true)} autoWidth={true}>
+                    <p>contacts</p>
+                    <img src="Imgs/contacts-icon.png" alt="Cont" />
+                </button>
+            </div>
+            <div className={Styles.openNav}>
+                <button className={Styles.navBtn} onClick={() => showNav ? setShowNav(false) : setShowNav(true)}>
+                    <img src="Imgs/menu-icon.png" alt="menu" />
+                </button>
             </div>
 
             <ModalWindow active={showH} setActive={setShowH}>
