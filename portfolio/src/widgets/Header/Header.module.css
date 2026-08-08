@@ -1,0 +1,285 @@
+.header {
+  z-index: 999;
+  background-color: white;
+  color: black;
+  position: sticky;
+  top: 0;
+  left: 50px;
+  width: (100% - 100px);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-inline: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  transition: 0.2s;
+}
+
+.noVisible {
+  opacity: 0;
+}
+
+.logo {
+  text-align: center;
+  font-size: 40px;
+
+  /* position: relative; */
+}
+
+.name {
+  position: relative;
+  font-style: italic;
+}
+
+.name::after {
+  position: absolute;
+  content: "";
+
+  width: 100%;
+  top: 45px;
+  left: 0;
+
+  height: 1px;
+  background: #bb5337;
+  margin-top: 5px;
+}
+
+.profession {
+  font-weight: 400;
+  display: none;
+}
+
+.openMenu {
+  display: none;
+}
+
+.navBtn img {
+  width: 50px;
+}
+
+.nav {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 400px;
+  gap: 20px;
+  transition: 0.4s;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+nav a.active {
+  color: #929090;
+}
+
+nav a:hover {
+  color: #797777;
+}
+
+.contBtn {
+  padding: 15px 25px;
+  border: 1px solid #000;
+  border-radius: 30px;
+
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  transition: 1s;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.contBtn p {
+  margin: 0;
+}
+
+.contBtn img {
+  display: none;
+}
+
+.contBtn:hover {
+  color: white;
+  background-color: #797777;
+  border-color: #797777;
+  border-radius: 0;
+}
+
+@media (max-width: 1480px) {
+  .logo {
+    font-size: calc(40px * 0.8);
+  }
+
+  .contBtn {
+    font-size: calc(20px * 0.8);
+  }
+
+  nav a {
+    font-size: calc(30px * 0.8);
+  }
+
+  .name::after {
+    top: calc(45px * 0.8);
+  }
+}
+
+@media (max-width: 1280px) {
+  .logo {
+    font-size: calc(40px * 0.7);
+  }
+
+  .contBtn {
+    font-size: calc(20px * 0.7);
+  }
+
+  nav a {
+    font-size: calc(30px * 0.7);
+  }
+
+  .name::after {
+    top: calc(45px * 0.7);
+  }
+}
+
+@media (max-width: 920px) {
+  .header {
+    margin: 0;
+  }
+
+  .logo {
+    position: relative;
+    display: flex;
+    font-size: calc(40px * 0.6);
+  }
+
+  .name {
+    position: static;
+    margin-right: 3px;
+  }
+
+  .name::after {
+    top: calc(45px * 0.1);
+  }
+
+  .profession {
+    display: block;
+  }
+
+  .nav {
+    padding-inline: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 15px;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 80px;
+    right: 0;
+  }
+
+  .nav > * {
+    font-size: 30px;
+  }
+
+  .isMenuOpen {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .openMenu {
+    display: block;
+  }
+
+  .navBtn {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .navBtn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .contBtn {
+    position: fixed;
+    padding: 20px;
+    border-radius: 55px;
+    background-color: white;
+    left: calc(50vw - (90px / 2));
+    top: 60px;
+    font-size: calc(20px * 0.6);
+
+    overflow: hidden;
+    border: none;
+  }
+
+  .contBtn p {
+    display: none;
+  }
+
+  .contBtn:hover {
+    border-radius: 50px;
+    background-color: white;
+  }
+
+  .contBtn img {
+    display: block;
+    width: 50px;
+  }
+
+  .nav {
+    flex-basis: 0;
+    gap: 0;
+  }
+
+  nav a {
+    margin-inline: 20px;
+  }
+
+  .name::after {
+    top: calc(45px * 0.6);
+  }
+}
+
+@media (max-width: 650px) {
+  .contBtn {
+    width: 90px;
+    height: 90px;
+    top: auto;
+    left: auto;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  }
+
+  .contBtn img {
+    border-radius: 55px;
+  }
+}
+
+@media (max-width: 550px) {
+  .nav {
+    padding-inline: 10px;
+  }
+
+  .nav > * {
+    font-size: 25px;
+  }
+}

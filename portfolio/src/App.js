@@ -1,20 +1,19 @@
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
-import Main from "./components/Main/Main";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Services from "./components/Services/Services";
-
+import Home from "./pages/Home/Home";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Services from "./pages/Services/Services";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <Router>
+      <div className="App">
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
         </Routes>
-      </Router>
-    </div >
+      </div>
+    </Router>
   );
 }
 

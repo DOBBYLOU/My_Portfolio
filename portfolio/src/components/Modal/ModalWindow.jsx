@@ -1,11 +1,18 @@
-import Styles from "./ModalWindow.module.css"
+import Styles from "./ModalWindow.module.css";
 
-function ModalWindow({ active, setActive, children }) {
-    return (
-        <div className={`${Styles.back} ${active ? Styles.active : ""}`} onClick={() => setActive(false)} >
-            <div className={`${Styles.modal} `} onClick={(e) => e.stopPropagation()}>{children}</div>
-        </div >
-    )
+function ModalWindow({ isOpen, setIsOpen, children }) {
+  const handleClose = () => setIsOpen(false);
+
+  return (
+    <div
+      className={`${Styles.back} ${isOpen ? Styles.active : ""}`}
+      onClick={handleClose}
+    >
+      <div className={Styles.modal} onClick={(e) => e.stopPropagation()}>
+        {children}
+      </div>
+    </div>
+  );
 }
 
-export default ModalWindow
+export default ModalWindow;

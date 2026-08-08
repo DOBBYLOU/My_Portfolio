@@ -1,0 +1,33 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-wrap: nowrap;
+}
+
+.cards > * {
+  flex: 1;
+}
+
+@media (max-width: 1280px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 650px) {
+  .cards {
+    margin-inline: 20px;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 550px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .cards > * {
+    width: 80%;
+  }
+}

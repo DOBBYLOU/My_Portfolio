@@ -1,44 +1,57 @@
-import { useState } from "react"
-import Styles from "./SiteCard.module.css"
+import { useState } from "react";
+import Styles from "./SiteCard.module.css";
 import ModalWindow from "../Modal/ModalWindow";
 
+function SiteCard({ project }) {
+  const { name, desc, screen, demo, git } = project;
 
-function SiteCard({ Screen, Demo, Git, Name, About }) {
-    const [aboutOpen, setAboutOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
-    const Open = () => {
-        setAboutOpen(true);
-    }
+  return (
+    <div className={Styles.siteCard}>
+      <div className={Styles.screen}>
+        <img src={screen} alt="Screen" />
+      </div>
 
+      <div className={Styles.text}>
+        <div className={Styles.about}>{name}</div>
+        <button className={Styles.aboutBtn} onClick={() => setAboutOpen(true)}>
+          About Project
+        </button>
 
+        <ModalWindow
+          isOpen={aboutOpen}
+          setIsOpen={setAboutOpen}
+          autoWidth={true}
+        >
+          <div className={`${Styles.aboutText}`}>
+            <h4>{name}</h4>
 
-    return (
-        <div className={Styles.siteCard}>
-            <div className={Styles.screen}>
-                <img src={Screen} alt="Screen" />
-            </div>
+            <p>{desc}</p>
+          </div>
+        </ModalWindow>
 
-
-
-            <div className={Styles.text}>
-                <div className={Styles.about}>
-                    {Name}
-                </div>
-                <button className={Styles.aboutBtn} onClick={() => Open()} >About Project</button>
-                <ModalWindow active={aboutOpen} setActive={setAboutOpen} autoWidth={true}>
-                    {About}
-
-                </ModalWindow>
-
-                <div className={Styles.btns}>
-                    <a href={Demo} className={`${Styles.btn} ${Styles.demoBtn}`}>Open Demo</a>
-                    <a href={Git} className={Styles.btn}>Open Code</a>
-                    {/* <a href="https://dobbylou.github.io/Velocity/">Velocity-Site</a> */}
-                </div>
-            </div>
-
+        <div className={Styles.btns}>
+          <a
+            href={demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${Styles.btn} ${Styles.demoBtn}`}
+          >
+            Open Demo
+          </a>
+          <a
+            href={git}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={Styles.btn}
+          >
+            Open Code
+          </a>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default SiteCard
+export default SiteCard;

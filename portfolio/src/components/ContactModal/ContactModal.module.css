@@ -1,0 +1,8 @@
+.copy {
+  user-select: text;
+}
+
+.copy::selection {
+  background: black;
+  color: white;
+}
